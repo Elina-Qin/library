@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统 - 图书管理</title>
+    <link rel="stylesheet" href="css/books.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>图书管理系统</h1>
+    </header>
+
+    <div class="content">
+        <div class="nav">
+            <a href="login.html">退出登录</a>
+        </div>
+
+        <h2>图书列表</h2>
+        <button class="add-btn" onclick="showAddModal()">添加图书</button>
+
+        <table>
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>书名</th>
+                <th>作者</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="books-list">
+            <!-- 图书数据将通过JavaScript动态加载 -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 添加图书模态框 -->
+<div id="add-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>添加图书</h3>
+            <button class="close-btn" onclick="hideAddModal()">&times;</button>
+        </div>
+        <form id="add-book-form">
+            <div class="form-group">
+                <label for="book-id">图书编号</label>
+                <input type="text" id="book-id" required>
+            </div>
+            <div class="form-group">
+                <label for="book-name">图书名称</label>
+                <input type="text" id="book-name" required>
+            </div>
+            <div class="form-group">
+                <label for="book-author">作者</label>
+                <input type="text" id="book-author" required>
+            </div>
+            <button type="submit" class="submit-btn">添加</button>
+        </form>
+    </div>
+</div>
+
+<!-- 编辑图书模态框 -->
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>编辑图书</h3>
+            <button class="close-btn" onclick="hideEditModal()">&times;</button>
+        </div>
+        <form id="edit-book-form">
+            <input type="hidden" id="edit-index">
+            <div class="form-group">
+                <label for="edit-book-id">图书编号</label>
+                <input type="text" id="edit-book-id" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-book-name">图书名称</label>
+                <input type="text" id="edit-book-name" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-book-author">作者</label>
+                <input type="text" id="edit-book-author" required>
+            </div>
+            <button type="submit" class="submit-btn">保存</button>
+        </form>
+    </div>
+</div>
+
+<script src="js/books.js"></script>
+</body>
+</html>

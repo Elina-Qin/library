@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>图书管理系统</h1>
+        <p>欢迎使用，请登录或注册</p>
+    </header>
+    <div class="tabs">
+        <div class="tab active" id="login-tab">登录</div>
+        <div class="tab" id="register-tab">注册</div>
+    </div>
+    <div class="form-container">
+        <form id="login-form" class="form active">
+            <div class="form-group">
+                <label for="login-username">用户名</label>
+                <input type="text" id="login-username" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">密码</label>
+                <input type="password" id="login-password" required>
+            </div>
+            <button type="submit">登录</button>
+            <div class="switch-link">
+                <p>没有账号？<a href="#" id="switch-to-register">点击注册</a></p>
+            </div>
+        </form>
+
+        <form id="register-form" class="form">
+            <div class="form-group">
+                <label for="register-username">用户名</label>
+                <input type="text" id="register-username" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">密码</label>
+                <input type="password" id="register-password" required>
+            </div>
+            <div class="form-group">
+                <label for="register-confirm">确认密码</label>
+                <input type="password" id="register-confirm" required>
+            </div>
+            <button type="submit">注册</button>
+            <div class="switch-link">
+                <p>已有账号？<a href="#" id="switch-to-login">点击登录</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/login.js"></script>
+</body>
+</html>
